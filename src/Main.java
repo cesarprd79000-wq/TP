@@ -1,4 +1,7 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -118,6 +121,21 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.out.println("Erreur de réservation évitée : " + e.getMessage());
         }
+
+        //EXERCICE 9
+        Etudiant e1 = new Etudiant("A1547882", "César", 15.5);
+        Etudiant e2 = new Etudiant("A1547882", "César Pierrard", 18.0);
+        Etudiant e3 = new Etudiant("A1478669", "Vincent", 12.0);
+
+        System.out.println(e1);
+
+        List<Etudiant> liste = new ArrayList<>();
+        liste.add(e1);
+
+        System.out.println("\ne1.equals(e2) ? " + e1.equals(e2));
+
+        System.out.println("La liste contient-elle e2 ? " + liste.contains(e2));
+        System.out.println("La liste contient-elle e3 ? " + liste.contains(e3));
     }
 
     private static void afficherInfosReservation(Reservation r) {
@@ -125,6 +143,8 @@ public class Main {
         System.out.println("Durée : " + r.dureeSejour() + " nuits");
         System.out.println("Haute saison : " + (Reservation.estEnHauteSaison(r.getDateArrivee()) ? "Oui" : "Non"));
     }
+
+
 
 
 
