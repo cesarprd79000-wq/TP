@@ -40,5 +40,14 @@ public class Main {
         }
 
         System.out.println("Solde final : " + compte.getSolde() + " €");
+
+        //EXERCICE 3
+        Rectangle r1 = new Rectangle(5, 3);
+        Rectangle r2 = new Rectangle(4);
+        Rectangle r3 = new Rectangle();
+
+        System.out.println("R1 Aire: " + r1.aire() + " | Périmètre: " + r1.perimetre());
+        System.out.println("R2  Aire: " + r2.aire() + " | Périmètre: " + r2.perimetre());
+        System.out.println("R3 Aire: " + r3.aire() + " | Périmètre: " + r3.perimetre());
     }
 }
