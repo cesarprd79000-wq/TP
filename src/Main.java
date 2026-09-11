@@ -68,6 +68,21 @@ public class Main {
         p.afficher();
         p.afficher(20.0);
         p.afficher("Euro");
+
+        //EXERCICE 6
+        Forme[] formes = new Forme[] {
+                new Cercle(3.0),
+                new Rectangle2(4.0, 5.0),
+                new Triangle(6.0, 2.0)
+        };
+
+        for (Forme f : formes) {
+            f.afficherAire();
+        }
+
+        Forme max = Forme.plusGrande(formes);
+        System.out.print("Plus grande forme : ");
+        max.afficherAire();
     }
 
 
