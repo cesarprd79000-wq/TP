@@ -49,5 +49,19 @@ public class Main {
         System.out.println("R1 Aire: " + r1.aire() + " | Périmètre: " + r1.perimetre());
         System.out.println("R2  Aire: " + r2.aire() + " | Périmètre: " + r2.perimetre());
         System.out.println("R3 Aire: " + r3.aire() + " | Périmètre: " + r3.perimetre());
+
+        //EXERCICE 4
+        Employe[] employes = new Employe[] {
+                new Employe("César", 2000.0),
+                new Manager("Vincent", 3000.0, 800.0),
+                new Employe("Elias", 2200.0),
+                new Manager("Maxime", 3500.0, 1200.0)
+        };
+
+        for (Employe e : employes) {
+            System.out.println(e.getNom() + " - Salaire : " + e.calculerSalaire() + " €");
+        }
     }
+
+
 }
