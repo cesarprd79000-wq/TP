@@ -83,6 +83,27 @@ public class Main {
         Forme max = Forme.plusGrande(formes);
         System.out.print("Plus grande forme : ");
         max.afficherAire();
+
+        //Exercice 7
+        Allumable[] appareils = new Allumable[] {
+                new TelephonePortable(),
+                new Lampe()
+        };
+
+        System.out.println("Allumage des appareils");
+        for (Allumable a : appareils) {a.allumer();}
+
+        System.out.println("\nConnexion Wi-Fi sélective");
+        for (Allumable a : appareils) {
+
+            if (a instanceof Connectewifi) {
+                Connectewifi appareilWifi = (Connectewifi) a;
+                appareilWifi.connecter("Maison_5G");
+            } else {
+                System.out.println("Cet appareil ne supporte pas le Wi-Fi.");
+            }
+        }
+
     }
 
 
