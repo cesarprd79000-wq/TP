@@ -61,6 +61,13 @@ public class Main {
         for (Employe e : employes) {
             System.out.println(e.getNom() + " - Salaire : " + e.calculerSalaire() + " €");
         }
+
+        //EXERCICE 5
+        Produit p = new Produit("Clavier Mécanique", 100.0);
+
+        p.afficher();
+        p.afficher(20.0);
+        p.afficher("Euro");
     }
 
 
