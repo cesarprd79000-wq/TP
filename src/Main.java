@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -104,7 +106,27 @@ public class Main {
             }
         }
 
+        //EXERCICE 8
+        Reservation res1 = new Reservation("Vincent", LocalDate.of(2026, 7, 10), LocalDate.of(2026, 7, 20));
+        Reservation res2 = new Reservation("César", LocalDate.of(2026, 11, 1), LocalDate.of(2026, 11, 5));
+
+        afficherInfosReservation(res1);
+        afficherInfosReservation(res2);
+
+        try {
+            new Reservation("César", LocalDate.of(2026, 8, 15), LocalDate.of(2026, 8, 10));
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erreur de réservation évitée : " + e.getMessage());
+        }
     }
+
+    private static void afficherInfosReservation(Reservation r) {
+        System.out.println("Réservation de " + r.getNomClient() + " :");
+        System.out.println("Durée : " + r.dureeSejour() + " nuits");
+        System.out.println("Haute saison : " + (Reservation.estEnHauteSaison(r.getDateArrivee()) ? "Oui" : "Non"));
+    }
+
+
 
 
 }
