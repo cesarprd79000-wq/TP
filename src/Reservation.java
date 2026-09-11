@@ -1,6 +1,9 @@
 import java.time.LocalDate;
 import java.time.Month;
 
+import static java.lang.Boolean.FALSE;
+import static java.lang.Boolean.TRUE;
+
 public class Reservation {
     private String nomClient;
     private LocalDate dateArrivee;
@@ -21,7 +24,8 @@ public class Reservation {
 
     public static boolean estEnHauteSaison(LocalDate date){
         Month mois = date.getMonth();
-        return mois == Month.JULY || mois == Month.AUGUST;
+        if (mois == Month.JULY || mois == Month.AUGUST) return TRUE;
+        else return FALSE;
     }
 
     public String getNomClient() {
