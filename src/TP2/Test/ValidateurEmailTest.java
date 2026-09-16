@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
 
-class ValidateurEmailTest {
+public class ValidateurEmailTest {
 
     @Test
     void testEmailValide() {
