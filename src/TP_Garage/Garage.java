@@ -53,7 +53,7 @@ public class Garage {
         }
     }
 
-    public double ageMoyen() {
+    public static double ageMoyen() {
         if (vehicules.isEmpty()) {
             return 0.0;
         }

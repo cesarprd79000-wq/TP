@@ -1,5 +1,6 @@
 package TP2.Test;
 
+import TP_Garage.Garage;
 import TP_Garage.ImmatriculationInvalideException;
 import TP_Garage.Voiture;
 import org.junit.jupiter.api.Test;
@@ -26,9 +27,8 @@ public class VoitureTest {
     @Test
     void TestCalculAgeEnAnnee() throws ImmatriculationInvalideException{
         LocalDate dateDeCirculation = LocalDate.now().minusYears(5);
-        Voiture voiture = new Voiture ("CP-212-BG",);
-
-        int age = voiture.ageEnAnnee();
+        Voiture voiture = new Voiture ("CP-212-BG","merco",5);
+        double age = Garage.ageMoyen();
         assertEquals(5,age);
     }
 
